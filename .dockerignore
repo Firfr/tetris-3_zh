@@ -1,0 +1,11 @@
+# 排除所有文件和目录
+*
+
+# 允许 index.html
+!index.html
+
+# 允许的目录（及其内容）
+!remote_files/
+!assets
+!js/
+!css/

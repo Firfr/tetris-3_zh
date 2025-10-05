@@ -1,28 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Tetris - Classic Puzzle Game</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>俄罗斯方块 - 经典益智游戏</title>
+    <link href="remote_files/fonts.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/png" href="assets/favicon.png">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Tetris</h1>
+            <h1>俄罗斯方块</h1>
             <div class="score-container">
                 <div class="score-box">
-                    <span class="score-label">Score</span>
+                    <span class="score-label">得分</span>
                     <span id="score">0</span>
                 </div>
                 <div class="score-box">
-                    <span class="score-label">Level</span>
+                    <span class="score-label">等级</span>
                     <span id="level">1</span>
                 </div>
                 <div class="score-box">
-                    <span class="score-label">Lines</span>
+                    <span class="score-label">行数</span>
                     <span id="lines">0</span>
                 </div>
             </div>
@@ -31,26 +31,26 @@
         <div class="game-area">
             <div class="game-info">
                 <div class="next-block">
-                    <h3>Next</h3>
+                    <h3>下一个</h3>
                     <canvas id="next-block-canvas"></canvas>
                 </div>
                 <div class="controls-info">
-                    <h3>Controls</h3>
+                    <h3>控制说明</h3>
                     <ul>
-                        <li>← → : Move</li>
-                        <li>↑ : Rotate</li>
-                        <li>↓ : Soft Drop</li>
-                        <li>Space : Hard Drop</li>
-                        <li>P : Pause</li>
+                        <li>← → : 移动</li>
+                        <li>↑ : 旋转</li>
+                        <li>↓ : 快速降落</li>
+                        <li>空格键 : 直接到底</li>
+                        <li>P : 暂停</li>
                     </ul>
                 </div>
                 <div class="mobile-controls">
-                    <h3>Mobile Controls</h3>
+                    <h3>移动端控制</h3>
                     <ul>
-                        <li>Swipe Left/Right : Move</li>
-                        <li>Tap : Rotate</li>
-                        <li>Swipe Down : Soft Drop</li>
-                        <li>Double Tap : Hard Drop</li>
+                        <li>左/右滑动 : 移动</li>
+                        <li>点击 : 旋转</li>
+                        <li>向下滑动 : 快速降落</li>
+                        <li>双击 : 直接到底</li>
                     </ul>
                 </div>
             </div>
@@ -58,39 +58,41 @@
         </div>
 
         <div class="buttons">
-            <button id="start-button" class="btn">Start Game</button>
-            <button id="pause-button" class="btn" disabled>Pause</button>
-            <button id="reset-button" class="btn">Reset</button>
+            <button id="start-button" class="btn">开始游戏</button>
+            <button id="pause-button" class="btn" disabled>暂停</button>
+            <button id="reset-button" class="btn">重置</button>
         </div>
 
         <div id="game-over" class="modal hidden">
             <div class="modal-content">
-                <h2>Game Over!</h2>
-                <p>Your final score: <span id="final-score">0</span></p>
-                <p>Lines cleared: <span id="final-lines">0</span></p>
-                <p>Highest level: <span id="final-level">1</span></p>
-                <button id="play-again" class="btn">Play Again</button>
+                <h2>游戏结束！</h2>
+                <p>最终得分: <span id="final-score">0</span></p>
+                <p>消除行数: <span id="final-lines">0</span></p>
+                <p>最高等级: <span id="final-level">1</span></p>
+                <button id="play-again" class="btn">再玩一次</button>
             </div>
         </div>
 
         <div id="level-up" class="modal hidden">
             <div class="modal-content">
-                <h2>Level Up!</h2>
-                <p>You've reached Level <span id="new-level">2</span>!</p>
-                <button id="continue" class="btn">Continue</button>
+                <h2>升级了！</h2>
+                <p>你已达到等级 <span id="new-level">2</span>!</p>
+                <button id="continue" class="btn">继续</button>
             </div>
         </div>
 
         <div id="pause-screen" class="modal hidden">
             <div class="modal-content">
-                <h2>Game Paused</h2>
-                <button id="resume" class="btn">Resume</button>
+                <h2>游戏暂停</h2>
+                <button id="resume" class="btn">恢复</button>
             </div>
         </div>
     </div>
 
     <footer>
-        <p>Created with ❤️ | <a href="https://github.com/musthofa-kamaluddin/Tetris" target="_blank">View on GitHub</a></p>
+        <p>欢迎点击 ❤️ | <a href="https://github.com/musthofa-kamaluddin/Tetris" target="_blank">原项目GitHub</a>
+        | <a href="https://github.com/Firfr/tetris-3_zh" target="_blank">汉化镜像制作仓库</a>
+        </p>
     </footer>
 
     <script src="js/game.js"></script>
